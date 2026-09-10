@@ -3,55 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Privacidad — RutaCash Core</title>
+<title>RutaCash Core — Liquidación diaria para conductores independientes</title>
+<meta name="description" content="Controla tus cobros y entregas del día. Simple, sin internet, sin líos.">
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.6; color: #1a1a1a; }
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.2em; margin-top: 2em; color: #38545E; }
-  .fecha { color: #666; font-size: 0.9em; }
-  ul { padding-left: 1.3em; }
-  a { color: #38545E; }
+  :root {
+    --superior: #506A73;
+    --inferior: #38545E;
+    --texto: #1a1a1a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--texto);
+    background: #f4f6f6;
+  }
+  header {
+    background: linear-gradient(160deg, var(--superior), var(--inferior));
+    color: #fff;
+    padding: 56px 20px 72px;
+    text-align: center;
+  }
+  header img.icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+  header img.wordmark {
+    height: 40px;
+    margin: 20px 0 8px;
+  }
+  header p.tagline {
+    font-size: 1.1em;
+    color: #dbe4e6;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    font-size: 0.95em;
+  }
+  main {
+    max-width: 900px;
+    margin: -40px auto 0;
+    padding: 0 20px 60px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    color: var(--inferior);
+    font-size: 1.3em;
+    margin-top: 0;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  .feature {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .feature .emoji { font-size: 1.6em; line-height: 1; }
+  .feature h3 { margin: 0 0 4px; font-size: 1.02em; }
+  .feature p { margin: 0; color: #555; font-size: 0.92em; }
+  .screenshots {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .screenshots img {
+    height: 420px;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  .pricing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .plan {
+    border: 1px solid #e2e6e6;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .plan.pro { border-color: var(--superior); background: #f0f4f4; }
+  .plan h3 { margin-top: 0; color: var(--inferior); }
+  .plan ul { padding-left: 1.2em; margin: 0; color: #444; font-size: 0.92em; }
+  footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    color: #667;
+    font-size: 0.9em;
+  }
+  footer a { color: var(--superior); }
+  @media (max-width: 560px) {
+    .pricing { grid-template-columns: 1fr; }
+    .screenshots img { height: 320px; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Política de Privacidad de RutaCash Core</h1>
-<p class="fecha">Última actualización: 8 de septiembre de 2026</p>
+<header>
+  <img class="icon" src="assets/icon.png" alt="RutaCash Core">
+  <br>
+  <img class="wordmark" src="assets/wordmark.png" alt="RutaCash Core">
+  <p class="tagline">Controla tus cobros y entregas del día. Simple, sin internet, sin líos.</p>
+  <span class="badge">🚀 Muy pronto en Google Play</span>
+</header>
 
-<p>RutaCash Core es una aplicación para conductores y repartidores independientes que ayuda a llevar el control de sus entregas y cobros diarios. Esta política explica de forma clara qué información usa la app y cómo la trata.</p>
+<main>
+  <div class="card">
+    <h2>¿Terminas el día sin saber cuánto cobraste?</h2>
+    <p style="color:#444; line-height:1.6;">RutaCash Core es la app pensada para conductores y repartidores independientes que necesitan cuadrar sus cuentas todos los días, sin depender de un cuaderno ni de cálculos mentales. Registra cada entrega y gasto en segundos, y sabe siempre cuánto te queda por liquidar.</p>
+  </div>
 
-<h2>Resumen: todo se queda en tu celular</h2>
-<p>RutaCash Core <strong>no tiene servidor ni base de datos en la nube</strong>. Toda la información que registras (rutas, entregas, gastos, paradas, tu nombre y tu foto de perfil) se guarda únicamente en el almacenamiento local de tu propio celular. Nada se envía, sincroniza ni se sube a ningún servidor nuestro — porque no existe uno.</p>
+  <div class="card">
+    <h2>Todo lo que necesitas en tu ruta diaria</h2>
+    <div class="features">
+      <div class="feature"><div class="emoji">📦</div><div><h3>Registra en segundos</h3><p>Anota cada entrega y gasto apenas suceden. Ve al instante cuánto llevas cobrado y cuánto te queda por liquidar.</p></div></div>
+      <div class="feature"><div class="emoji">🗺️</div><div><h3>Planifica tu ruta</h3><p>Agrega tus paradas del día y mira siempre cuál es tu próxima entrega, ordenada por cercanía real con GPS.</p></div></div>
+      <div class="feature"><div class="emoji">🧭</div><div><h3>Navega sin complicarte</h3><p>Mira cómo llegar sin salir de la app, o abre Waze o Google Maps directo en modo navegación.</p></div></div>
+      <div class="feature"><div class="emoji">🧾</div><div><h3>Liquidación lista</h3><p>Genera un PDF con el resumen del día y compártelo por WhatsApp, correo o donde lo necesites.</p></div></div>
+      <div class="feature"><div class="emoji">📊</div><div><h3>Historial y resúmenes</h3><p>Revisa tus rutas pasadas y arma resúmenes por el rango de fechas que quieras.</p></div></div>
+      <div class="feature"><div class="emoji">🔒</div><div><h3>100% privado</h3><p>Sin servidor, sin anuncios, sin rastreadores. Toda tu información se queda solo en tu celular.</p></div></div>
+    </div>
+  </div>
 
-<h2>Qué información usa la app y para qué</h2>
-<ul>
-  <li><strong>Nombre y foto de perfil (opcional):</strong> solo para personalizar el saludo dentro de la app. Se guardan localmente en tu celular; nunca se transmiten a ningún lado.</li>
-  <li><strong>Cámara / galería:</strong> se usa únicamente si eliges tomar o elegir una foto de perfil. La app no accede a tu cámara ni a tus fotos en ningún otro momento.</li>
-  <li><strong>Ubicación (GPS):</strong> se usa para calcular cuál es tu próxima parada más cercana y para abrir la app de navegación (Waze o Google Maps) hacia el destino que tú elijas. Tu ubicación no se guarda en ningún historial ni se envía a servidores externos — se usa en el momento y ya.</li>
-  <li><strong>Entregas, gastos, paradas y liquidaciones:</strong> lo que tú registras manualmente en la app, guardado localmente para que puedas ver tu historial y generar tus reportes en PDF.</li>
-  <li><strong>Notificaciones:</strong> los usuarios con el plan Pro pueden recibir un recordatorio diario dentro del celular para compartir su liquidación. Esta notificación se genera y programa localmente en tu propio dispositivo.</li>
-</ul>
+  <div class="card">
+    <h2>Así se ve</h2>
+    <div class="screenshots">
+      <img src="assets/screenshot_inicio.png" alt="Pantalla de Inicio de RutaCash Core">
+      <img src="assets/screenshot_historial.png" alt="Pantalla de Historial de RutaCash Core">
+    </div>
+  </div>
 
-<h2>Compartir información</h2>
-<p>RutaCash Core no comparte, vende ni transmite tu información a terceros. La única forma en que datos de la app "salen" del celular es cuando tú, de forma explícita, tocas "Compartir PDF" y eliges a través de qué app (WhatsApp, correo, etc.) enviar tu liquidación — esa acción la decides tú cada vez, la app no lo hace automáticamente.</p>
+  <div class="card">
+    <h2>Gratis para empezar</h2>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Gratis</h3>
+        <ul>
+          <li>Hasta 30 operaciones al mes</li>
+          <li>Registro de entregas y gastos</li>
+          <li>Ruta del día con paradas</li>
+          <li>"Cómo llegar" dentro de la app</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Pro</h3>
+        <ul>
+          <li>Operaciones ilimitadas</li>
+          <li>Detalle completo de rutas pasadas</li>
+          <li>Resumen por rango de fechas</li>
+          <li>Recordatorio diario de liquidación</li>
+          <li>Navegación directa en Waze / Google Maps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
 
-<h2>Navegación externa (Waze / Google Maps)</h2>
-<p>Cuando usas los botones "Cómo llegar" o "Navegar en Waze/Google Maps", la app abre esas aplicaciones externas (o una vista de mapa dentro de la app) para mostrarte la ruta. El uso que esas apps externas hagan de tu ubicación se rige por sus propias políticas de privacidad, no por esta.</p>
-
-<h2>Anuncios y rastreo</h2>
-<p>RutaCash Core no muestra anuncios ni usa herramientas de rastreo, analítica de terceros, ni SDKs publicitarios.</p>
-
-<h2>Menores de edad</h2>
-<p>RutaCash Core no está dirigida a menores de edad y no recolecta intencionalmente información de menores.</p>
-
-<h2>Eliminar tus datos</h2>
-<p>Como toda la información vive únicamente en tu celular, puedes eliminarla en cualquier momento desinstalando la app, o borrando sus datos desde Ajustes → Aplicaciones → RutaCash Core → Almacenamiento → Borrar datos.</p>
-
-<h2>Cambios a esta política</h2>
-<p>Si esta política cambia, se actualizará esta misma página con una nueva fecha.</p>
-
-<h2>Contacto</h2>
-<p>Si tienes preguntas sobre esta política de privacidad, puedes escribir a: <a href="mailto:mirko.alejos.cerna@gmail.com">mirko.alejos.cerna@gmail.com</a></p>
+<footer>
+  RutaCash Core &middot; <a href="privacy.html">Política de privacidad</a> &middot; <a href="mailto:mirko.alejos.cerna@gmail.com">Contacto</a>
+</footer>
 
 </body>
 </html>
